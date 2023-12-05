@@ -1,4 +1,26 @@
  .d-flex{padding-right: 50%;} 
 .bi{color: goldenrod;}
-.dog{color: rgb(196, 66, 66);}
 .img1{padding-right: 20px;}
+.hd1{color: rgb(239, 103, 103);}
+.reg1{padding-top: 50px;}
+.hd2{padding-left: 50%;}
+.bt1{background-color: rgb(94, 116, 204);font-size: 20px;color: aliceblue;width: 150px;border-color: aliceblue;}
+.divbt{padding-left: 220px;}
+
+
+
+/* .div_1{background: url(../image/kaathal--the-core-et00355670-1679575936.avif) no-repeat top ;
+    background-size: cover;height: 550px;filter: brightness(100%);position: relative;} */
+
+.div_2{padding-left: 380px; padding-top: 50px;}
+.bt_1{position:absolute;right: 59%;bottom: 35%;}
+.bt_01{position:absolute;right: 54%;bottom: 35%;}
+.hd_1{position: absolute;right: 55%;top: 20%;color: aliceblue;}
+.hd_2{position: absolute;right: 57%;top: 32%;color: aliceblue;}
+.bi-star-fill{color: rgb(211, 138, 48);padding-right: 5px;}
+.div_3{position: absolute;right: 40%;bottom: 43%;}
+/* .div_4{position: absolute;right: 43%;bottom: 43%;background-color: rgb(34, 27, 27) ;border-radius: 10%; height: 80Px;width: 350px;} */
+.hd_3{color: aliceblue;}
+.p_1{position: absolute;right: 47%;bottom: 48%;color: aliceblue;}
+.bt_2{position: absolute;right: 55%;bottom: 43%;}
+.div_4{padding-top: 30px;}

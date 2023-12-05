@@ -11,15 +11,61 @@
   <link href="{% static '/CSS/main.css' %}" rel="stylesheet">
 </head>
 <body>
- 
-{% comment %} navbar {% endcomment %}
-  <nav class="navbar bg-dark navbar-dark">
+
+
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
     <div class="container-fluid">
-      <a class="navbar-brand ">Navbar</a>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      <a class="navbar-brand" href="#"><img src="{% static 'images/logo.png class=' %}" class="w-100"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          
+          <li class="nav-item">
+            <a class="nav-link" href="credential/logout">Home</a>
+          </li>
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="#">sports</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Activities</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Language
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">English</a></li>
+              <li><a class="dropdown-item" href="#">Hindi</a></li>  
+              <li><a class="dropdown-item" href="#">Telugu</a></li>
+              <li><a class="dropdown-item" href="#">Kannada</a></li>  
+              <li><a class="dropdown-item" href="#">Tamil</a></li>
+              <li><a class="dropdown-item" href="#">Malayalam</a></li>
+             
+            </ul>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search for movies,Events,spots and Activities" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      <ul class="nav nav-pills">
+        {% if user.is_authenticated %}
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="credential/logout">Logout</a>
+        {% else %}
+          <li class="nav-item">
+            <a class="nav-link active me-3" aria-current="page" href="credential/Register">Register</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link active me-3" aria-current="page" href="credential/Login">Login</a>
+        {% endif %}
+      </ul>
+      </div>
     </div>
   </nav>
 
@@ -52,32 +98,41 @@
 
 <div class="container">
    <div class="row">
-    <h3>Reccomended Movies</h3>
+    <h3 class="hd1 my-3 ">Reccomended Movies</h3>
     {% for i in Movies  %}
 
     <div class="col-lg-3 col-md-4 col-sm-6 my-3">
 
       <img src="{{i.photo.url}}" class="w-100" height="381px" alt="kathal">
       <h3>{{i.name}}</h3>
-      <h5><i class="bi bi-star-fill"></i></h5>
-      <p>{{i.desc}}</p>
+      <h5><i class="bi bi-star-fill"></i>{{i.rate}}</h5>
+      <p></p>
 
     </div> 
     {% endfor %} 
+  </div>
+
+
+</div>
     
-{% comment %} Stream {% endcomment %}
+{% comment %} End page{% endcomment %}
 
-<div class="container">
-   <div class="row">
-     <div class="col-lg col-md col-sm my-5">
-       <img src="{% static 'images/stream-leadin-web-collection-202210241242 (1).avif'  %}" class="img1">
-   </div> 
+<div class="container-fluid">
+ <div class="row">
+  {% for i in Promo %}
+   <div class="col-lg">
+      <img src="{{i.photo.url}}" class="w-100" height="500px" >
+   </div>
+   {% endfor %}
 
-</div>  
+ </div>
+
+</div>
+  
+ 
 
     
-   </div>  
-</div> 
+
   
 
 
