@@ -12,43 +12,110 @@
     <link href="{% static '/CSS/main.css' %}" rel="stylesheet"> 
   </head>
   <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg">
-                <div class="div_1" style="background: url(../image/kaathal--the-core-et00355670-1679575936.avif) no-repeat top ;
-                background-size: cover;height: 550px;filter: brightness(100%);position: relative;">
-                 
-                  <button class="bt_1">2D</button>
-                  <button class="bt_01">malayalam</button>
-                  <div class="div_2">
-                   <img src="image/th_rxpfPt2.jpeg" width="300px" height="450px" me-3>
-                 </div>
+
+
+
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="{% static 'images/logo.png class=' %}" class="w-100"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="credential/logout">Home</a>
+            </li>
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#">sports</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Activities</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Language
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">English</a></li>
+                <li><a class="dropdown-item" href="#">Hindi</a></li>  
+                <li><a class="dropdown-item" href="#">Telugu</a></li>
+                <li><a class="dropdown-item" href="#">Kannada</a></li>  
+                <li><a class="dropdown-item" href="#">Tamil</a></li>
+                <li><a class="dropdown-item" href="#">Malayalam</a></li>
+               
+              </ul>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search for movies,Events,spots and Activities" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        <ul class="nav nav-pills">
+          {% if user.is_authenticated %}
+  
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="credential/logout">Logout</a>
+          {% else %}
+            <li class="nav-item">
+              <a class="nav-link active me-3" aria-current="page" href="credential/Register">Register</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link active me-3" aria-current="page" href="credential/Login">Login</a>
+          {% endif %}
+        </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
+
+    <div class="parant">
+        <img class="img_1" src="{% static 'image/k1.avif' %}">
+        <div class="container">
+          <div class="row">
+             <div class="col-lg-6">
+                <div class="child">
+                    <img src="{% static 'image/k2.jpeg' %}">
+
+            
+                </div>
+              </div>
+              <div class="col-lg-6 ">
+                <div class="child_1">
+                    
+                  
                  <h1 class="hd_1">Kathal</h1>
                  <h2 class="hd_2"><i class="bi bi-star-fill"></i>8.6</h2>
-                 <div class="row div_3">
-                   <div class="col-lg-6 col-md-6 col-sm-6">
-                      <h4 class="hd_3">Add your rating & reviwe</h4>
-                   </div>
-                   <div class="col-lg-6 col-md-6 col-sm-6 ">
-                    <a class="btn btn-primary disabled" role="button" aria-disabled="true">Rate now</a>
-
-                 </div>
-
-                 </div>
+                 <h4 class="hd_3">Add your rating & reviwe</h4>
+                 <div class="div_3">
+                 <a class="btn btn-primary disabled" role="button" aria-disabled="true">Rate now</a>
+                </div>
+                <div 
+                 <button class="bt_1">2D</button>
+                <button class="bt_01">malayalam</button>
+                <div class="div_4">
+                  <button type="button" class="btn btn-success">Add</button>
+                  <button type="button" class="btn btn-danger">Delete</button>
 
                 </div>
-                <p class="p_1">sasasaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-                <div class="bt_2">
-                <button type="button" class="btn btn-danger">Book Tickets</button>
-                </div> 
-                
-            </div>
+                <div class="div_5">
+                    <a class="btn btn-dark disabled" role="button" aria-disabled="true"><i class="bi bi-share"></i>Share</a>
+                </div>
+            
+                </div>
+              </div>
+          </div>
+       </div>
 
-        </div>
+    </div>
 
-
-
-    </div> 
 
     <div class="container">
       <div class="row div_4">
@@ -62,6 +129,8 @@
       </div>
 
     </div>
+
+
     
     
 
